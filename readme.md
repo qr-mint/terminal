@@ -29,4 +29,4 @@ The Terminal Game API is already integrated with our game [@apocalypton_bot](htt
 
 ### Contact
 
-If you're interested in this project or want to learn more, please contact me via email at dao0dev.
+If you're interested in this project or want to learn more, please contact me via email at qr.mint.dev@gmail.com or telegram @dao0dev.
