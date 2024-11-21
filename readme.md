@@ -16,7 +16,7 @@
 
 ### Using the API
 
-The Terminal Game API is already integrated with our game [@apocalypton_bot](https://t.me/apocalypton_bot), which will be released soon. This API can be used not only for Telegram Mini Apps but also for other applications requiring payment system integration.
+The Terminal Game API is already integrated with our game [@apocalypton_bot](https://t.me/apocalypton_bot), [@QRMint_bot](https://t.me/QRMint_bot), [WEB QRMint](https://qr-mint.net), which will be released soon. This API can be used not only for Telegram Mini Apps but also for other applications requiring payment system integration.
 
 ### Benefits
 
