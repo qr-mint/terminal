@@ -1,5 +1,7 @@
 # Terminal Game API
 
+Documentation: [API Documentation](https://doc.qr-mint.net)
+
 **Terminal Game API** is a project developed by a DAO gaming developer community, providing a convenient API for integrating various payment systems into TMA (Telegram Mini Apps) games and other applications. The platform currently supports payment systems such as Stars, Aeon, and ArcPay (TonConnect), allowing game developers to easily integrate payments without needing to create their own backend.
 
 ### Project Features
