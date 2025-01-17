@@ -104,14 +104,7 @@ The webhook accepts a JSON payload with the following general structure:
     "id": "string",
     "amount": "number",
     "order_no": "string",
-    "nft": {
-      "id": "string",
-      "address": "string",
-      "status": "string",
-      "url": "string",
-      "index": "number",
-      "collection_address": "string"
-    },
+    "nft": "boolean",
     "transactions": [
       {
         "id": "string",
@@ -134,10 +127,6 @@ The webhook accepts a JSON payload with the following general structure:
 | `order_no`      | `string`   | Unique order number.                          | Yes      |
 | `nft`           | `object`   | Details of the related NFT.                   | Yes      |
 | `transactions`  | `array`    | List of transactions associated with the order. | No       |
-
-##### Fields for `nft` (in `order`)
-
-Same as the fields in the `nft` event.
 
 ##### Fields for `transactions` (in `order`)
 
