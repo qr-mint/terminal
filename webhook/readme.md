@@ -132,36 +132,6 @@ The webhook accepts a JSON payload with the following general structure:
 
 Same as the fields in the `transactions` section of the `nft` event.
 
----
-
-### 3. Event: `transaction`
-
-#### Request Example
-
-```json
-{
-  "event": "transaction",
-  "data": {
-    "id": "string",
-    "address_to": "string",
-    "address_from": "string",
-    "hash": "string",
-  },
-  "timestamp": "number"
-}
-```
-
-#### Fields for `transaction`
-
-| Field           | Type       | Description                                   | Required |
-|------------------|------------|-----------------------------------------------|----------|
-| `id`            | `string`   | Unique identifier for the transaction.       | Yes      |
-| `address_to`    | `string`   | Recipient address.                           | Yes      |
-| `address_from`  | `string`   | Sender address.                              | Yes      |
-| `hash`          | `string`   | Hash of the transaction.                     | Yes      |
-
----
-
 ## Response Format
 
 The server should respond with a status code to indicate the result:
