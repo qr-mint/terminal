@@ -49,20 +49,27 @@ The webhook accepts a JSON payload with the following general structure:
 
 ```json
 {
-  "event": "nft",
+  "event": "nfts",
   "data": {
-    "id": "string",
-    "address": "string",
-    "status": "string",
-    "url": "string",
-    "index": "number",
-    "collection_address": "string",
+    "nfts": [
+      {
+        "id": "string",
+        "address": "string",
+        "status": "string",
+        "url": "string",
+        "index": "number",
+        "collection": {
+          "address": "string"
+        }
+      }
+    ],
     "transactions": [
       {
         "id": "string",
         "address_to": "string",
         "address_from": "string",
         "hash": "string",
+        "network": "string"
       }
     ]
   },
@@ -70,26 +77,32 @@ The webhook accepts a JSON payload with the following general structure:
 }
 ```
 
-#### Fields for `nft`
+#### Fields for `nfts` (in `data`)
 
-| Field                 | Type       | Description                                     | Required |
-|-----------------------|------------|-------------------------------------------------|----------|
-| `id`                 | `string`   | Unique identifier for the NFT.                | Yes      |
-| `address`            | `string`   | Address of the NFT.                           | Yes      |
-| `status`             | `string`   | Status of the NFT (e.g., `minted`, `sold`).   | Yes      |
-| `url`                | `string`   | URL to view the NFT.                          | Yes      |
-| `index`              | `number`   | Index of the NFT in the collection.           | Yes      |
-| `collection_address` | `string`   | Address of the collection the NFT belongs to. | Yes      |
-| `transactions`       | `array`    | List of transactions associated with the NFT. | No       |
+| Field        | Type   | Description                               | Required |
+| ------------ | ------ | ----------------------------------------- | -------- |
+| `id`         | string | Unique NFT identifier                     | Yes      |
+| `address`    | string | NFT address                               | Yes      |
+| `status`     | string | NFT status (`success`, `deploying`, etc.) | Yes      |
+| `url`        | string | NFT URL                                   | Yes      |
+| `index`      | number | Index in the collection                   | Yes      |
+| `collection` | object | Collection data                           | Yes      |
 
-##### Fields for `transactions` (in `nft`)
+#### Fields for `nft.collection`
+| Field     | Type   | Description        | Required |
+| --------- | ------ | ------------------ | -------- |
+| `address` | string | Collection address | Yes      |
 
-| Field            | Type       | Description                              | Required |
-|------------------|------------|------------------------------------------|----------|
-| `id`             | `string`   | Unique identifier for the transaction.  | Yes      |
-| `address_to`     | `string`   | Recipient address.                       | Yes      |
-| `address_from`   | `string`   | Sender address.                          | Yes      |
-| `hash`           | `string`   | Hash of the transaction.                 | Yes      |
+##### Fields for `transactions` (in `data`)
+
+| Field          | Type   | Description           | Required |
+| -------------- | ------ | --------------------- | -------- |
+| `id`           | string | Transaction ID        | Yes      |
+| `address_to`   | string | Recipient address     | Yes      |
+| `address_from` | string | Sender address        | Yes      |
+| `hash`         | string | Transaction hash      | Yes      |
+| `network`      | string | Network (`ton`, etc.) | Yes      |
+
 
 ---
 
